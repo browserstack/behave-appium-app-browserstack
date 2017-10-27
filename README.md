@@ -8,5 +8,3 @@ Code samples to get started with Appium tests for your Native App using Behave.
 
 ## Resources
 * [Get Started guide](https://www.browserstack.com/app-automate/appium-behave)
-* [Android sample code repo](https://github.com/browserstack/behave-appium-app-browserstack/tree/master/android)
-* [IOS sample code repo](https://github.com/browserstack/behave-appium-app-browserstack/tree/master/ios)

@@ -1,0 +1,17 @@
+{
+  "user": "BROWSERSTACK_USERNAME",
+  "key": "BROWSERSTACK_ACCESS_KEY",
+
+  "capabilities": {
+    "build": "behave-browserstack",
+    "name": "single_test",
+    "browserstack.debug": true,
+    "realMobile":true,
+    "automationName": "XCUITest",
+    "app": "bs://<hashed app-id>"
+  },
+
+  "environments": [{
+    "device": "iPhone 7"
+  }]
+}

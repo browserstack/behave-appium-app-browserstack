@@ -1,0 +1,25 @@
+{
+  "user": "BROWSERSTACK_USERNAME",
+  "key": "BROWSERSTACK_ACCESS_KEY",
+
+  "capabilities": {
+    "build": "behave-browserstack",
+    "name": "parallel_test",
+    "realMobile":true,
+    "browserstack.debug": true,
+    "app": "bs://<hashed app-id>"
+  },
+
+  "environments": [{
+    "device": "Samsung Galaxy S8"
+  },
+  {
+    "device": "Samsung Galaxy S7"
+  },
+  {
+    "device": "Google Nexus 5"
+  },
+  {
+    "device": "Google Pixel"
+  }]
+}

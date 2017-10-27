@@ -1,0 +1,6 @@
+behave
+browserstack-local
+paver
+selenium
+psutil
+Appium-Python-Client

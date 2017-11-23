@@ -8,7 +8,6 @@
     "browserstack.debug": true,
     "browserstack.local": true,
     "realMobile":true,
-    "automationName": "XCUITest",
     "app": "bs://<hashed app-id>"
   },
 

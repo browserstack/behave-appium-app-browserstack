@@ -5,7 +5,6 @@
   "capabilities": {
     "build": "behave-browserstack",
     "name": "parallel_test",
-    "realMobile":true,
     "browserstack.debug": true,
     "app": "bs://<hashed app-id>"
   },

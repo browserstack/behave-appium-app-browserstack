@@ -6,8 +6,7 @@
     "build": "behave-browserstack",
     "name": "single_test",
     "browserstack.debug": true,
-    "app": "bs://<hashed app-id>",
-    "browserstack.enterpriseApp": true
+    "app": "bs://<hashed app-id>"
   },
 
   "environments": [{

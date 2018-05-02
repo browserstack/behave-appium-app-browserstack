@@ -5,33 +5,32 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 
 
-@given('I open the app and click on login')
+@given('I open the app and click on Text Button')
 def step_impl(context):
     element = WebDriverWait(context.browser, 30).until(
-        EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, "Log In"))
+        EC.presence_of_element_located((MobileBy.ACCESSIBILITY_ID, "Text Button"))
     )
     element.click()
 
 
-@then(u'Enter email "{email}" and click on next')
-def step_impl(context, email):
-    email_input = WebDriverWait(context.browser, 30).until(
-        EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Email address"))
+@then(u'Type "{text}" and hit enter')
+def step_impl(context, text):
+    text_input = WebDriverWait(context.browser, 30).until(
+        EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Text Input"))
     )
-    email_input.send_keys(email)
-    context.browser.find_element_by_accessibility_id("Next").click()
+    text_input.send_keys(text+"\n")
     time.sleep(5)
     
 
-@then(u'Verify login error')
+@then(u'Verify displayed text matches input text')
 def step_impl(context):
-    text_elements = context.browser.find_elements_by_xpath("//XCUIElementTypeStaticText")
-    assert(len(text_elements) > 0)
-    elements = filter(
-        lambda x: x and x.__contains__("not registered on WordPress.com"),
-        [x.text for x in text_elements]
+    text_output = WebDriverWait(context.browser, 30).until(
+        EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, "Text Output"))
     )
-    assert(len(elements) > 0)
+    if text_output!=None and text_output.text=="hello@browserstack.com":
+        assert True
+    else:
+        assert False
     
 
 # Local Steps

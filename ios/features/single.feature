@@ -1,5 +1,5 @@
-Feature: Wordpress Login
-    Scenario: Non existing email should give error
-        Given I open the app and click on login
-        Then Enter email "hello@browserstack.com" and click on next
-        Then Verify login error
+Feature: 
+    Scenario: Displayed Text should match Input Text
+        Given I open the app and click on Text Button
+        Then Type "hello@browserstack.com" and hit enter
+        Then Verify displayed text matches input text

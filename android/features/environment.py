@@ -34,6 +34,9 @@ def before_feature(context, feature):
         if key not in desired_capabilities:
             desired_capabilities[key] = CONFIG["capabilities"][key]
 
+    if 'BROWSERSTACK_APP_ID' in os.environ:
+        desired_capabilities['app'] = os.environ['BROWSERSTACK_APP_ID']     
+
     if "browserstack.local" in desired_capabilities and desired_capabilities["browserstack.local"]:
         start_local()
 

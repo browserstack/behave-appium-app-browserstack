@@ -1,0 +1,13 @@
+{
+    "username":"BROWSERSTACK_USERNAME",
+    "access_key":"BROWSERSTACK_ACCESS_KEY",
+
+    "capabilities": {
+        "project": "First Behave iOS Project",
+        "build": "Behave iOS",
+        "name": "first_test",
+        "browserstack.debug": true,
+        "app": "bs://a2c4c0bd114ce9765af0988a632982cb42688b81",
+        "device": "iPhone 7"
+    }
+}

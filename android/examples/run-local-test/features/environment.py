@@ -18,15 +18,15 @@ def start_local():
     bs_local.start(**bs_local_args)
 
 def stop_local():
-    """Stops BrowserStack local"""
+    """Stops BrowserStack Local"""
     global bs_local
     if bs_local is not None:
         bs_local.stop()
 
 def before_feature(context, feature):
-    desired_capabilities = CONFIG['capabilities']
     # Start BrowserStack local before start of the test
     start_local()
+    desired_capabilities = CONFIG['capabilities']
     context.browser = webdriver.Remote(
         desired_capabilities=desired_capabilities,
         command_executor="http://%s:%s@hub-cloud.browserstack.com/wd/hub" % (BROWSERSTACK_USERNAME, BROWSERSTACK_ACCESS_KEY)

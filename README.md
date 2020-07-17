@@ -31,15 +31,24 @@ This repository demonstrates how to run Appium Behave tests on BrowserStack App 
 
 ### Install the dependencies
 
-Depending on whether you are running Android or iOS tests, run :
+To install the dependencies for Android tests, run :
 
 ```sh
-pip3(or pip) install -r android/requirements.txt or pip3(or pip) install -r ios/requirements.txt
+pip3(or pip) install -r android/requirements.txt
 ```
+
+Or,
+
+To install the dependencies for iOS tests, run :
+
+```sh
+pip3(or pip) install -r ios/requirements.txt
+```
+
 
 ## Getting Started
 
-Getting Started with Appium tests in Behave on real BrowserStack devices couldn't be easier!
+Getting Started with Appium tests in Behave on real BrowserStack couldn't be easier!
 
 ### **Run first test :**
 

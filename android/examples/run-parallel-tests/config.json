@@ -6,8 +6,8 @@
       "project": "First Behave Android Project",
       "build": "Behave Android Parallel",
       "name": "parallel_test",
-        "browserstack.debug": true,
-        "app": "bs://d318ec55142bf92b1fec9fce6904109294db6678"
+      "browserstack.debug": true,
+      "app": "bs://d318ec55142bf92b1fec9fce6904109294db6678"
     },
 
     "environments": [{

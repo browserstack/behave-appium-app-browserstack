@@ -77,7 +77,7 @@ For other Python frameworks samples, refer to following repositories :
 - [Lettuce](https://github.com/browserstack/lettuce-appium-app-browserstack)
 - [Python Native](https://github.com/browserstack/python-appium-app-browserstack)
 
-Note: For other test frameworks supported by App-Automate refer [App-Automate testing frameworks documentation](https://www.browserstack.com/docs/app-automate/appium)
+Note: For other test frameworks supported by App-Automate refer our [Developer documentation](https://www.browserstack.com/docs/)
 
 ## Getting Help
 

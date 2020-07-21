@@ -25,26 +25,49 @@ This repository demonstrates how to run Appium Behave tests on BrowserStack App 
 
         - After dowloading, run the file :
 
-        ```sh
-        python3(or python) get-pip.py
-        ```
+            - For Python 3
+
+                ```sh
+                python3 get-pip.py
+                ```
+
+            - For Python 2
+
+                ```sh
+                python2 get-pip.py
+                ```
 
 ### Install the dependencies
 
 To install the dependencies for Android tests, run :
 
-```sh
-pip3(or pip) install -r android/requirements.txt
-```
+- For Python 3
+
+    ```sh
+    pip3 install -r android/requirements.txt
+    ```
+
+- For Python 2
+
+    ```sh
+    pip2 install -r android/requirements.txt
+    ```
 
 Or,
 
 To install the dependencies for iOS tests, run :
 
-```sh
-pip3(or pip) install -r ios/requirements.txt
-```
+- For Python 3
 
+    ```sh
+    pip3 install -r ios/requirements.txt
+    ```
+
+- For Python 2
+
+    ```sh
+    pip2 install -r ios/requirements.txt
+    ```
 
 ## Getting Started
 

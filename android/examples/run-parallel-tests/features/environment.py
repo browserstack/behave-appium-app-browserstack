@@ -17,7 +17,7 @@ def before_feature(context, feature):
     desired_capabilities['device'] = CONFIG['environments'][TASK_ID]['device']
     context.browser = webdriver.Remote(
         desired_capabilities=dict(desired_capabilities),
-        command_executor="http://%s:%s@hub-cloud.browserstack.com/wd/hub" % (BROWSERSTACK_USERNAME, BROWSERSTACK_ACCESS_KEY)
+        command_executor="http://%s:%s@%s/wd/hub" % (BROWSERSTACK_USERNAME, BROWSERSTACK_ACCESS_KEY, CONFIG['server'])
     )
 
 def after_feature(context, feature):

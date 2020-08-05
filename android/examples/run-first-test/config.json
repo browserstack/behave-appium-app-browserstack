@@ -9,6 +9,7 @@
         "name": "first_test",
         "browserstack.debug": true,
         "app": "bs://<hashed app-id>",
-        "device": "Google Pixel"
+        "device": "Google Pixel 3",
+        "os_version": "9.0"
     }
 }

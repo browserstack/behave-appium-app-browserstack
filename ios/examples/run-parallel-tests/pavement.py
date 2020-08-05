@@ -25,10 +25,10 @@ def run_behave_test(task_id=0):
 def run(args):
     if args[0] == 'parallel_tests':
         jobs = []
-        for i in range(2):
-            p = threading.Thread(target=run_behave_test,args=(i,))
-            jobs.append(p)
-            p.start()
+        for index in range(2):
+            thread = threading.Thread(target=run_behave_test,args=(index,))
+            jobs.append(thread)
+            thread.start()
 
         for thread in jobs:
             thread.join()

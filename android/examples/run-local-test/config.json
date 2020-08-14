@@ -8,7 +8,7 @@
         "build": "Behave Android Local",
         "name": "local_test",
         "browserstack.debug": true,
-        "app": "bs://<hashed app-id>",
+        "app": "bs://<app-id>",
         "device": "Google Pixel 3",
         "os_version": "9.0",
         "browserstack.local": true

@@ -18,4 +18,6 @@ def before_feature(context, feature):
     )
 
 def after_feature(context, feature):
+    # Invoke driver.quit() after the test is done to indicate to BrowserStack 
+    # that the test is completed. Otherwise, test will appear as timed out on BrowserStack.
     context.browser.quit()

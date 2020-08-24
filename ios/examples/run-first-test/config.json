@@ -1,7 +1,7 @@
 {
     "capabilities": {
-        "browserstack.user" : "BROWSERSTACK_USERNAME",
-        "browserstack.key" : "BROWSERSTACK_ACCESS_KEY",
+        "browserstack.user" : "YOUR_USERNAME",
+        "browserstack.key" : "YOUR_ACCESS_KEY",
         "project": "First Behave iOS Project",
         "build": "Behave iOS",
         "name": "first_test",

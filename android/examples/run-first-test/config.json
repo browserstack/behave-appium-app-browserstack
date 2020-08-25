@@ -1,0 +1,13 @@
+{
+    "capabilities": {
+        "browserstack.user" : "YOUR_USERNAME",
+        "browserstack.key" : "YOUR_ACCESS_KEY",
+        "project": "First Behave Android Project",
+        "build": "Behave Android",
+        "name": "first_test",
+        "browserstack.debug": true,
+        "app": "bs://<app-id>",
+        "device": "Google Pixel 3",
+        "os_version": "9.0"
+    }
+}

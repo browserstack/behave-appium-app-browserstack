@@ -1,0 +1,19 @@
+{
+    "capabilities": {
+      "browserstack.user" : "YOUR_USERNAME",
+      "browserstack.key" : "YOUR_ACCESS_KEY",
+      "project": "First Behave iOS Project",
+      "build": "Behave iOS Parallel",
+      "name": "parallel_test",
+      "browserstack.debug": true,
+      "app": "bs://<app-id>"
+    },
+
+    "environments": [{
+      "device": "iPhone 11 Pro",
+      "os_version": "13"
+    }, {
+      "device": "iPhone 11 Pro Max",
+      "os_version": "13"
+  }]
+}

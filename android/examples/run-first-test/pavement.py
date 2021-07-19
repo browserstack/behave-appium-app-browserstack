@@ -15,7 +15,7 @@ setup(
 )
 
 def run_behave_test():
-    sh('behave features/first_test.feature')
+    sh('behave features/first_test.feature --junit')
 
 @task
 @consume_nargs(1)

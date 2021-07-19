@@ -1,6 +1,5 @@
-# Test for BrowserStack sample Wikipedia Android app
-# Note: If you have uploaded your app to BrowserStack update the test here
-Feature: Wikipedia Search Functionality
-    Scenario: can find search results
-        Given I open the app and search for keyword "BrowserStack"
-        Then Search results should appear
+Feature: POC for Appium-behave-BrowserStack
+    Scenario: Should increment click counter when button is clicked
+        Given I open the app
+        When I click the button "Click me"
+        Then I should see the text "You clicked 1 times"

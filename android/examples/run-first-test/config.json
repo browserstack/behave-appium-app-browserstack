@@ -3,7 +3,7 @@
         "browserstack.user" : "YOUR_USERNAME",
         "browserstack.key" : "YOUR_ACCESS_KEY",
         "project": "First Behave Android Project",
-        "build": "Behave Android",
+        "build": "browserstack-build-1",
         "name": "first_test",
         "browserstack.debug": true,
         "app": "bs://<app-id>",

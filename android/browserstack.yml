@@ -24,8 +24,8 @@ buildIdentifier: '#${BUILD_NUMBER}' # Supports strings along with either/both ${
 # This property is needed to send test context to BrowserStack (test name, status)
 framework: behave
 
-# app: ./WikipediaSample.apk
-app: ./LocalSample.apk #For running local tests
+app: ./WikipediaSample.apk
+# app: ./LocalSample.apk #For running local tests
 
 # =======================================
 # Platforms (Browsers / Devices to test)

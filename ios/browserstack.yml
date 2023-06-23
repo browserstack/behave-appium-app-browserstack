@@ -26,8 +26,8 @@ framework: behave
 
 source: behave-appium-browserstack:sample-sdk:v1.0
 
-# app: ./BStackSampleApp.ipa
-app: ./LocalSample.ipa #For running local tests
+app: ./BStackSampleApp.ipa
+# app: ./LocalSample.ipa #For running local tests
 
 # =======================================
 # Platforms (Browsers / Devices to test)

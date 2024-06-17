@@ -12,13 +12,12 @@ if 'BROWSERSTACK_USERNAME' in os.environ: CONFIG['capabilities']['browserstack.u
 if 'BROWSERSTACK_ACCESS_KEY' in os.environ: CONFIG['capabilities']['browserstack.key'] = os.environ['BROWSERSTACK_ACCESS_KEY']
 
 def before_feature(context, feature):
-    desired_capabilities = CONFIG['capabilities']
-    context.browser = webdriver.Remote(
-        desired_capabilities=desired_capabilities,
-        command_executor="http://hub-cloud.browserstack.com/wd/hub"
-    )
+    desired_cap = CONFIG['capabilities']
+    context.driver = webdriver.Remote(
+        command_executor="http://hub-cloud.browserstack.com/wd/hub",
+        desired_capabilities=desired_cap)
 
 def after_feature(context, feature):
     # Invoke driver.quit() after the test is done to indicate to BrowserStack 
     # that the test is completed. Otherwise, test will appear as timed out on BrowserStack.
-    context.browser.quit()
+    context.driver.quit()

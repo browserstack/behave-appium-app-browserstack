@@ -1,73 +1,22 @@
 # behave-appium-app-browserstack
 
-This repository demonstrates how to run Appium Behave tests on BrowserStack App Automate.
-
-## Setup
+This repository demonstrates how to run Appium Behave tests on BrowserStack App Automate using SDK.
 
 ### Requirements
 
-1. Python 3.6+ or Python 2.7+
+* Python3
 
-    - If Python is not installed, follow these instructions:
-        - For Windows, download latest python version from [here](https://www.python.org/downloads/windows/) and run the installer executable
-        - For Mac and Linux, run `python --version` to see what python version is pre-installed. If you want a different version download from [here](https://www.python.org/downloads/)
+## Setup
 
-2. Package Manager `pip`
-
-    Note : `pip` comes installed with Python 2.7.9+ and python 3.4+
-
-    - If `pip` is not installed, follow these instructions:
-        - Securely download get-pip.py by following this link: [get-pip.py](https://bootstrap.pypa.io/get-pip.py) or use following cURL command to download it:
-
-        ```sh
-        curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-        ```
-
-        - After dowloading, run the file :
-
-            - For Python 3
-
-                ```sh
-                python3 get-pip.py
-                ```
-
-            - For Python 2
-
-                ```sh
-                python2 get-pip.py
-                ```
-
-### Install the dependencies
-
-To install the dependencies for Android tests, run :
-
-- For Python 3
-
-    ```sh
-    pip3 install -r android/requirements.txt
-    ```
-
-- For Python 2
-
-    ```sh
-    pip2 install -r android/requirements.txt
-    ```
-
-Or,
-
-To install the dependencies for iOS tests, run :
-
-- For Python 3
-
-    ```sh
-    pip3 install -r ios/requirements.txt
-    ```
-
-- For Python 2
-
-    ```sh
-    pip2 install -r ios/requirements.txt
-    ```
+* Clone the repo with `git clone -b sdk https://github.com/browserstack/pytest-appium-app-browserstack.git`
+* It is recommended to use a virtual environment to install dependencies. To create a virtual environment:
+  ```
+  python3 -m venv env
+  source env/bin/activate # on Mac
+  env\Scripts\activate # on Windows
+  ```
+* Install dependencies `pip install -r requirements.txt`
+* To run your automated tests using BrowserStack, you must provide a valid username and access key. This can be done either by providing your username and access key in the `browserstack.yml` configuration file, or by setting the `BROWSERSTACK_USERNAME` and `BROWSERSTACK_ACCESS_KEY` environment variables.
 
 ## Getting Started
 
@@ -75,21 +24,61 @@ Getting Started with Appium tests in Behave on real BrowserStack couldn't be eas
 
 ### **Run first test :**
 
-- Switch to `run-first-test` directory under [Android examples](android/examples/run-first-test) or [iOS examples](ios/examples/run-first-test)
+**1. Upload your Android or iOS App**
 
-- Follow the steps outlined in the documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/python/behave)
+Specify your Android app (.apk or .aab file) or iOS app (.ipa file) in the `browserstack.yml` configuration file. Here is an example app config :
 
-### **Speed up test execution with parallel testing :**
+```
+app: '/path/to/local/app.apk'
+```
 
-- Switch to `run-prarallel-tests` directory under [Android examples](android/examples/run-parallel-tests) or [iOS examples](ios/examples/run-parallel-tests)
+Set `app` to use the appliction under test for Appium sessions. Available options: app: `/path/to/local/app.apk` OR app: `bs://<app-id>` i.e App URL returned when uploading the app to BrowserStack manually. Visit https://www.browserstack.com/docs/app-automate/appium/set-up-tests/specify-app for more options
 
-- Follow the steps outlined in the documentation - [Get Started with Parallel testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/python/behave/parallelize-tests)
+**Note**: If you do not have an .apk or .ipa file and are looking to simply try App Automate, you can download and test using our [sample Android app](https://www.browserstack.com/app-automate/sample-apps/android/WikipediaSample.apk) or [sample iOS app](https://www.browserstack.com/app-automate/sample-apps/ios/BStackSampleApp.ipa).
+
+**2. Configure and run your first single test**
+
+Open `browserstack.yml` file in `android` folder for Android and `ios` folder for iOS:
+
+- Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` in the `browserstack.yml` configuration file. Get your BrowserStack access credentials from [here](https://www.browserstack.com/accounts/settings)
+
+- Replace `app: bs://<app-id>` with the URL obtained from app upload step or mention the path to your apk file.
+
+- Run the below command to execute a Android test on BrowserStack AppAutomate:
+    ```
+    cd android
+    browserstack-sdk behave features/first_test.feature
+    ```
+
+- Run the below command to execute a iOS test on BrowserStack AppAutomate:
+    ```
+    cd ios
+    browserstack-sdk behave features/first_test.feature
+    ```
+
+- You can access the test execution results, and debugging information such as video recording, network logs on [App Automate dashboard](https://app-automate.browserstack.com/dashboard)
 
 ### **Use Local testing for apps that access resources hosted in development or testing environments :**
 
-- Switch to `run-local-test` directory under [Android examples](android/examples/run-local-test) or [iOS examples](ios/examples/run-local-test)
+Open `browserstack.yml` file in `android` folder for Android and `ios` folder for iOS:
 
-- Follow the steps outlined in the documentation - [Get Started with Local testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/python/behave/local-testing)
+- Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` in the `browserstack.yml` configuration file. Get your BrowserStack access credentials from [here](https://www.browserstack.com/accounts/settings)
+
+- Replace `app: bs://<app-id>` with the URL obtained from app upload step or mention the path to your apk file.
+
+- Run the below command to execute a Android test on BrowserStack AppAutomate:
+    ```
+    cd android
+    browserstack-sdk behave features/first_test.feature
+    ```
+
+- Run the below command to execute a iOS test on BrowserStack AppAutomate:
+    ```
+    cd ios
+    browserstack-sdk behave features/first_test.feature
+    ```
+
+- You can access the test execution results, and debugging information such as video recording, network logs on [App Automate dashboard](https://app-automate.browserstack.com/dashboard)
 
 **Note**: If you are facing any issues, refer [Getting Help section](#Getting-Help)
 

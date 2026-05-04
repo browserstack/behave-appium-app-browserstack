@@ -23,7 +23,7 @@ buildIdentifier: '#${BUILD_NUMBER}' # Supports strings along with either/both ${
 # Set `framework` of your test suite. Example, `testng`, `cucumber`, `cucumber-testng`
 # This property is needed to send test context to BrowserStack (test name, status)
 framework: behave
-
+aiAuthoring: true
 app: ./WikipediaSample.apk
 # app: ./LocalSample.apk #For running local tests
 
